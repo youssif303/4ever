@@ -1,0 +1,15 @@
+node_modules/
+**/node_modules/
+
+.env
+.env.*
+!.env.example
+
+dist/
+**/dist/
+
+.expo/
+**/.expo/
+
+.DS_Store
+*.log

@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/4ever/"
+title = "4Ever"
+description = "A calm wellbeing and self-reflection mobile app that helps people reconnect with themselves and others through supportive AI conversations, mood check-ins, conversation history, and therapist support requests."
+version = "1.0.0"
+id = "artifacts/4ever"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/4ever/" ]
+localPort = 18557
+
+[services.development]
+run = "pnpm --filter @workspace/4ever run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/4ever", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/4ever", "run", "serve" ]
+
+[services.env]
+PORT = "18557"
+BASE_PATH = "/4ever/"
